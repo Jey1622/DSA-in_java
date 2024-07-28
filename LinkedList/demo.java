@@ -25,6 +25,11 @@ public class demo {
 		for(int a:list) {
 			System.out.print(a+" ");
 		}
+		list.reverse();
+		System.out.println(" ");
+		for(int a:list) {
+			System.out.print(a+" ");
+		}
 		
 	}
 

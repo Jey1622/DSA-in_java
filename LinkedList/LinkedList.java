@@ -76,10 +76,23 @@ public class LinkedList<Type> implements Iterable<Type>{
 	}
 	public void deleteAtBeginning() {
 		if(head==null) 
-			throw new IndexOutOfBoundsException("Deetion attempted on empty list");
+			throw new IndexOutOfBoundsException("Deletion attempted on empty list");
 		
 		head=head.next;
 		return;
+	}
+	public void reverse() {
+		Node prev=null;
+		Node current = head;
+		Node next=head.next;
+		
+		while(current!=null) {
+			next=current.next;
+			current.next=prev;
+			prev=current;
+			current=next;
+		}
+		head=prev;
 	}
 
 	@Override
