@@ -16,6 +16,9 @@ public class Demo_BST {
 			System.out.println("Not found");
 		else 
 			System.out.println("found");
+		bst.delete(70);
+		bst.inOrder(bst.root);
+		System.out.println();
 	}
 
 }
